@@ -1,17 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
-import { ReactComponent as CRALogo } from './assets/cra-logo.svg';
-import { ReactComponent as RPLogo } from './assets/rp-logo.svg';
-import { ReactComponent as PlusSign } from './assets/plus-sign.svg';
 
 export function Logos() {
-  return (
-    <Wrapper>
-      <CRALogo className="logo" />
-      <PlusSign className="sign" />
-      <RPLogo className="logo" />
-    </Wrapper>
-  );
+  return <Wrapper></Wrapper>;
 }
 
 const Wrapper = styled.div`

@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 import { Logo } from './Logo';
 import { StyleConstants } from 'styles/StyleConstants';
 import { Nav } from './Nav';
-import { PageWrapper } from '../PageWrapper';
 
 export function NavBar() {
   return (
@@ -34,10 +33,13 @@ const Wrapper = styled.header`
         'rgba$1,0.75)',
       )};
   }
-
-  ${PageWrapper} {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+`;
+const PageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  @media screen and (min-width: 990px) {
+    width: 990px;
   }
 `;

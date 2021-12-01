@@ -1,28 +1,26 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
-import { ReactComponent as DocumentationIcon } from './assets/documentation-icon.svg';
-import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 
 export function Nav() {
   return (
     <Wrapper>
       <Item
-        href="https://cansahin.gitbook.io/react-boilerplate-cra-template/"
+        href="#"
         target="_blank"
         title="Documentation Page"
         rel="noopener noreferrer"
       >
-        <DocumentationIcon />
-        Documentation
+        <Icon src="/mootches.png" alt="Mootches icon" />
+        <Label>My mootches</Label>
       </Item>
       <Item
-        href="https://github.com/react-boilerplate/react-boilerplate-cra-template"
+        href="#"
         target="_blank"
         title="Github Page"
         rel="noopener noreferrer"
       >
-        <GithubIcon />
-        Github
+        <Icon src="/account.png" alt="My account" />
+        <Label>My profile</Label>
       </Item>
     </Wrapper>
   );
@@ -53,5 +51,15 @@ const Item = styled.a`
 
   .icon {
     margin-right: 0.25rem;
+  }
+`;
+
+const Icon = styled.img`
+  margin-right: 10px;
+`;
+
+const Label = styled.span`
+  @media screen and (max-width: 580px) {
+    display: none;
   }
 `;
